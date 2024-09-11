@@ -10,18 +10,25 @@ However, ***an ideal image should have pixel values distributed across the entir
 To achieve this, the histogram needs to be stretched towards both ends, and this is essentially what **histogram equalization** does. 
 This process typically enhances image contrast, improving the interpretability of visual data and making images more suitable for further analysis in computer vision tasks.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9a75282a-6edd-4606-b199-76fcf025f468" width="400">
+</p>
+
+<p align="right">
+  Image source: <a href="https://en.wikipedia.org/wiki/Histogram_equalization">Wikipedia</a>
+</p>
+
+
+
+## Example Image: Demonstrating Histogram Equalization
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/46e579fc-29df-4b35-b04e-ad672e792af8" width="600">
+  <img src="https://github.com/user-attachments/assets/8566ea94-9ca4-4d5c-a781-91fbd68e929c" width="1000">
 </p>
 
 The demonstrated image is of Eda U. Gerstacker Grove on the North Campus of the University of Michigan.
 The histogram shows that this image's grayscale distribution is concentrated in three distinct areas.
 This is not ideal, as such an image lacks detail and natural gradation. However, is there a way we can improve it?
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/8566ea94-9ca4-4d5c-a781-91fbd68e929c" width="1000">
-</p>
 
 **Yes! Histogram Equalization !!!**
 
