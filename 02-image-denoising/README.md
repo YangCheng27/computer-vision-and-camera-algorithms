@@ -85,10 +85,16 @@ The Gaussian filter applies a weighted average based on a Gaussian distribution,
 
 ### 3. Median Filter
 
-The median filter replaces each pixel with the median value of the neighboring pixels. The results show a dramatic improvement in PSNR for the 9x9 kernel, indicating that the median filter excels at reducing noise while maintaining image sharpness. However, for larger kernels (15x15 and 21x21), the PSNR decreases slightly, indicating that over-smoothing occurs when the kernel size is too large, leading to some loss of detail.
+The median filter replaces each pixel with the median value of its neighboring pixels, making it particularly effective at removing impulse noise and Gaussian noise. In this case, the median filter significantly outperforms the mean and Gaussian filters, with a PSNR of 24.54 dB at a kernel size of 9x9.
+
+As with the other filters, increasing the kernel size too much (e.g., 21x21 or 39x39) causes over-smoothing, which reduces PSNR.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/93c158be-7b50-4349-8721-93d40d7a5e75" width="600">
 </p>
 
+## Conclusion
+- **Mean Filter**: Adequate at noise reduction but causes significant blurring, with 9x9 providing the best balance between noise removal and detail preservation. Larger kernels tend to overly smooth the image, decreasing PSNR slightly.
+- **Gaussian Filter**: Performs similarly to the mean filter but preserves edges slightly better. The PSNR reaches a peak at 9x9 and 21x21, after which larger kernels offer diminishing returns and increased blurring.
+- **Median Filter**: Outperforms both the mean and Gaussian filters, especially with the 9x9 kernel. The median filter is the most effective at preserving details while removing noise, making it the best option for this type of noise.
 
