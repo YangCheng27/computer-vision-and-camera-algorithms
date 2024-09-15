@@ -13,10 +13,11 @@ def get_noisy_image(path, mean=0, sigma=5):
 
 def get_noisy_image_color(path, mean=0, sigma=5):
     img= cv2.imread(path) #BGR
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     #img = cv2.resize(img, (1000, 750))
     row, col, ch = img.shape
-    gauss = np.random.normal(mean, sigma, (row, col, ch))  # 產生高斯噪聲
-    gauss_noise = gauss.reshape(row, col, ch).astype('uint8')  # 將噪聲轉換為 uint8 類型
+    gauss = np.random.normal(mean, sigma, (row, col, ch))
+    gauss_noise = gauss.reshape(row, col, ch).astype('uint8')
     img_noisy = cv2.add(img, gauss_noise)
     return img, img_noisy
 
@@ -52,7 +53,7 @@ def get_mean_filter_results(img_orig, img_noisy):
             'mean_filter_9': mean_filtering_9, 'mean_filter_15': mean_filtering_15, 'mean_filter_21': mean_filtering_21}
     return imgs
 
-def get_gaussian_filter_results(img_orig, img_noisy):
+def get_gaussian_filter_by_size_results(img_orig, img_noisy):
     gaussian_filtering_3 = cv2.GaussianBlur(img_noisy, (3,3), 0)
     gaussian_filtering_9 = cv2.GaussianBlur(img_noisy, (9,9), 0)
     gaussian_filtering_15 = cv2.GaussianBlur(img_noisy, (15,15), 0)
@@ -92,5 +93,5 @@ if __name__ == '__main__':
     plt.show()
 
     visualization(get_mean_filter_results(img_color_orig, img_color_noisy), "mean_filter_results")
-    visualization(get_gaussian_filter_results(img_color_orig, img_color_noisy), "gaussian_filter_results")
+    visualization(get_gaussian_filter_by_size_results(img_color_orig, img_color_noisy), "gaussian_filter_results")
     visualization(get_median_filter_results(img_color_orig, img_color_noisy), "median_filter_results")
