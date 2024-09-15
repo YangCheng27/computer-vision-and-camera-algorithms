@@ -64,7 +64,7 @@ PSNR is commonly used to assess the performance of image denoising techniques, w
 - Calculate and display PSNR to evaluate the performance of denoising algorithms.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cdb6733a-0a73-4a34-8050-23747f4d7567" width="1200">
+  <img src="https://github.com/user-attachments/assets/e1ab4e76-14e3-4b51-8dae-3da0dc4e64e6" width="1200">
 </p>
 
 ### 1. Mean Filter
@@ -72,7 +72,7 @@ PSNR is commonly used to assess the performance of image denoising techniques, w
 The mean filter is a simple smoothing technique where the pixel value is replaced by the average of the pixel values within the neighborhood defined by the kernel. It reduces noise, but it also blurs the image, especially for larger kernel sizes.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a4a626d1-06b7-4cb3-b19e-22becfa088d5" width="600">
+  <img src="https://github.com/user-attachments/assets/52baa3d3-36bd-4d93-b262-7f920ff2a541" width="600">
 </p>
 
 ### 2. Gaussian Filter
@@ -80,7 +80,7 @@ The mean filter is a simple smoothing technique where the pixel value is replace
 The Gaussian filter applies a weighted average based on a Gaussian distribution, where pixels closer to the center have more influence than those farther away. While the PSNR values are slightly higher than those of the mean filter, the overall increase is not significant. It still blurs the image as the kernel size increases.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e5b7df8f-5a90-4440-a00c-93f3f27c76d7" width="600">
+  <img src="https://github.com/user-attachments/assets/e9fe3df7-7b12-419a-a834-cc25042faf7e" width="600">
 </p>
 
 ### 3. Median Filter
@@ -88,7 +88,7 @@ The Gaussian filter applies a weighted average based on a Gaussian distribution,
 The median filter replaces each pixel with the median value of the neighboring pixels. The results show a dramatic improvement in PSNR for the 9x9 kernel, indicating that the median filter excels at reducing noise while maintaining image sharpness. However, for larger kernels (15x15 and 21x21), the PSNR decreases slightly, indicating that over-smoothing occurs when the kernel size is too large, leading to some loss of detail.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/be919d7a-76a4-45d1-86fc-494305c8de72" width="600">
+  <img src="https://github.com/user-attachments/assets/93c158be-7b50-4349-8721-93d40d7a5e75" width="600">
 </p>
 
 
