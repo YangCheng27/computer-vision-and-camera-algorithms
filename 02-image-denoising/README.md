@@ -55,29 +55,28 @@ Where:
 PSNR is commonly used to assess the performance of image denoising techniques, where a higher PSNR indicates that the algorithm has effectively reduced noise while preserving important image details.
 
 
-
 ## Denoising Neighbor Filters
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/436ec722-d02d-4efd-aba0-6240baed4e2b" width="1200">
+  <img src="https://github.com/user-attachments/assets/cdb6733a-0a73-4a34-8050-23747f4d7567" width="1200">
 </p>
 
 ### 1. Mean Filter
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c06521b1-043b-40e7-b141-2eb1f7818bea" width="600">
+  <img src="https://github.com/user-attachments/assets/a4a626d1-06b7-4cb3-b19e-22becfa088d5" width="600">
 </p>
 
 ### 2. Gaussian Filter
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5f848fc0-0814-46a1-8679-39b402c87709" width="600">
+  <img src="https://github.com/user-attachments/assets/e5b7df8f-5a90-4440-a00c-93f3f27c76d7" width="600">
 </p>
 
 ### 3. Median Filter
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/45bd86cd-3d46-46b4-bd77-249f18f73ade" width="600">
+  <img src="https://github.com/user-attachments/assets/be919d7a-76a4-45d1-86fc-494305c8de72" width="600">
 </p>
 
 
