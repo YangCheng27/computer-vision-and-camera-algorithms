@@ -31,8 +31,46 @@ This combination allows cameras to create high-quality color images using a rela
   Image source: <a href="https://en.wikipedia.org/wiki/Cone_cell">Wikipedia</a>
 </p>
 
-## Placeholder
-TBD
+## Demosaicing
+
+**Demosaicing** is a method used in digital image processing to reconstruct a full-color image from the incomplete color samples output by an **image sensor** overlaid with a **Bayer filter**. A Bayer filter captures color information for red, green, and blue channels by placing a mosaic of color filters over the camera's sensor, where each pixel records only one of the three primary colors.
+
+#### 1. Bayer Filter
+This program uses a **Bayer filter** to simulate this process and then implements interpolation techniques to recover the full RGB image.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8a721a27-6cfc-4d81-a132-4d177e8cfa7e" width="800">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/be5b17a3-b777-4e43-934f-9832365fe6e9" width="800">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1ae5cb8a-673c-4d64-a5e6-a1c0c11cd163" width="800">
+</p>
+
+#### 2. Demosaicing
+The algorithm **rgb_demosaicing(img_gray)** interpolates the missing color information for each pixel. Green pixels are used to recover the red and blue channels, and red and blue pixels are used to recover the green channel.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e981a33d-646b-4346-bb35-55ebac41d78c" width="800">
+</p>
+
+> Helper Functions:
+
+- **four_neighbors_avg**: Averages the color values of the four neighboring pixels.
+- **four_corners_avg**: Averages the values of the four diagonal corner pixels.
+- **top_bottom_avg**: Averages the top and bottom neighboring pixels.
+- **left_right_avg**: Averages the left and right neighboring pixels.
+
+#### 3. Result: recovered image
+
+This file demonstrates the basic principles of demosaicing using a Bayer filter, a fundamental technique in digital image processing. Through this script, we simulate how digital cameras process raw sensor data to generate full-color images.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/88ee9887-1657-4e58-986a-4252f2056dc0" width="800">
+</p>
 
 
 
