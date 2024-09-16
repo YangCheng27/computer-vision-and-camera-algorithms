@@ -176,7 +176,7 @@ def img_display(img, name):
     fig = plt.gcf()
     fig.set_size_inches(8, 5)
     plt.tight_layout()
-    plt.savefig(name)
+    plt.savefig('imgs/' + name)
     plt.show()
 
 

@@ -40,7 +40,7 @@ def visualization(imgs: dict, save_name):
             axes[num].set_title(img + f', psnr: {psnr: .2f}')
         num += 1
     plt.tight_layout()
-    plt.savefig(save_name)
+    plt.savefig('imgs/' + save_name)
     plt.show()
 
 def get_mean_filter_results(img_orig, img_noisy):
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     fig = plt.gcf()
     fig.set_size_inches(12, 6)
     plt.tight_layout()
-    plt.savefig('orig_and_deoise_images')
+    plt.savefig('imgs/orig_and_deoise_images')
     plt.show()
 
     visualization(get_mean_filter_results(img_color_orig, img_color_noisy), "mean_filter_results")
